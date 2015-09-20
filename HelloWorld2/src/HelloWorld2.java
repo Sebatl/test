@@ -13,6 +13,7 @@ public class HelloWorld2 {
 		System.out.println("Bonjour tout le monde");
 		System.out.println("salve mundi");
 		System.out.println("Dia duit ar domhan");
+		System.out.println("hello donya");
 	}
 
 }
