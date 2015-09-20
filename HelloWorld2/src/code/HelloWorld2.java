@@ -1,3 +1,4 @@
+package code;
 /**
  * @author      Sebastián Torres
  * @version     0.5
@@ -16,4 +17,10 @@ public class HelloWorld2 {
 		System.out.println("hello donya");
 	}
 
+	public String printEng(){
+		return "Hello World";
+	}
+	
 }
+
+
