@@ -1,6 +1,11 @@
-
+/**
+ * @author      Sebastián Torres
+ * @version     0.5
+ * @since       20-9-2015
+ */
 public class HelloWorld2 {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hola Mundo");
