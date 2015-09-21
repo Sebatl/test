@@ -44,6 +44,15 @@
     </junit>
 </target>
 
+<target name="test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="testing.Test" todir="${junit.output.dir}"/>
+            <classpath refid="HelloWorld2.classpath"/>
+        </junit>
+    </target>
+
 <target name="test-reports" depends="test">
     <junitreport tofile="TESTS-TestSuites.xml" todir="${junit.output.dir}/reports">
         <fileset dir="${junit.output.dir}">
