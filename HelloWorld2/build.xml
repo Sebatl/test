@@ -72,7 +72,7 @@
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
         </fileset>
-        <report format="frames" todir="${junit.report.dir}/reports2" />
+        <report format="frames" todir="${junit.report.dir}/reports" />
     </junitreport>
 </target>
 	
