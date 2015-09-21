@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 
 import code.HelloWorld2;
 
-public class HellowWorld2Test extends TestCase {
+public class HelloWorld2Test extends TestCase {
 	
 	private HelloWorld2 hello;
 	
@@ -43,7 +43,7 @@ public class HellowWorld2Test extends TestCase {
 
     @org.junit.Test
     public void testEngLanguage() {
-        assertEquals(hello.printEng(), "Hello World");
+        assertEquals(hello.printEng(), "Hello world");
         System.out.println("@Test - testEmptyCollection");
     }
 }

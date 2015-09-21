@@ -65,7 +65,7 @@
 <target name="testHelloWorld2" depends="compile">
     <junit fork="yes" printsummary="withOutAndErr">
         <formatter type="xml"/>
-        <test name="testing.HellowWorld2Test" todir="${junit.report.dir}"/>
+        <test name="testing.HelloWorld2Test" todir="${junit.report.dir}"/>
         <classpath refid="HelloWorld2.classpath"/>
     </junit>
 </target>
