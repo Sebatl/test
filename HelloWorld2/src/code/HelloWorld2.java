@@ -24,7 +24,7 @@ public class HelloWorld2 {
 	}
 
 	/**
-	 * Idioma: Ingles
+	 * Hola Mundo en: Ingles
 	 * @return Traduccion de Hola Mundo en Ingles
 	 */
 	public String printEng(){
@@ -32,7 +32,7 @@ public class HelloWorld2 {
 	}
 	
 	/**
-	 * Idioma: Espanol
+	 * Hola Mundo en: Espanol
 	 * @return Hola Mundo
 	 */
 	public String printSpa(){
@@ -40,7 +40,7 @@ public class HelloWorld2 {
 	}
 	
 	/**
-	 * Idioma: Frances
+	 * Hola Mundo en: Frances
 	 * @return Traduccion de Hola Mundo en Frances
 	 */
 	public String printFre(){
@@ -48,7 +48,7 @@ public class HelloWorld2 {
 	}
 	
 	/**
-	 * Idioma: Javanes
+	 * Hola Mundo en: Javanes
 	 * @return Traduccion de Hola Mundo en Javanes
 	 */
 	public String printJav(){
@@ -56,7 +56,7 @@ public class HelloWorld2 {
 	}
 	
 	/**
-	 * Idioma: Indonesio
+	 * Hola Mundo en: Indonesio
 	 * @return Traduccion de Hola Mundo en Indonesio
 	 */
 	public String printInd(){
@@ -64,7 +64,7 @@ public class HelloWorld2 {
 	}
 	
 	/**
-	 * Idioma: Yoruba
+	 * Hola Mundo en: Yoruba
 	 * @return Traduccion de Hola Mundo en Yoruba
 	 */
 	public String printYor(){
