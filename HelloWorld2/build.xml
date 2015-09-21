@@ -2,6 +2,7 @@
 <project name="jenkins-tests" basedir=".">
 
 <property name="junit.output.dir" value="${junit.dir}/test"/>
+<property name="junit.report.dir" value="junit/test/"/>
 <property name="src.dir" value="src"/>
 <property name="junit.dir" value="junit" />
 <property name="bin.dir" value="bin" />
@@ -22,16 +23,16 @@
 </path>
 
 <target name="clean" description="Clean up build artefacts">
-    <delete dir="${basedir}/${junit.output.dir}" />
+    <delete dir="${basedir}/${junit.report.dir}" />
 </target>
 
 <target name="prepare" depends="clean" description="Prepare for build">
-    <mkdir dir="${basedir}/${junit.output.dir}" />
-    <mkdir dir="${junit.output.dir}/reports"/> 
+    <mkdir dir="${basedir}/${junit.report.dir}" />
+    <mkdir dir="${junit.report.dir}/reports"/> 
 </target>
 
 <target name="compile" depends="prepare">
-    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="true" >
+    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="false" >
         <classpath refid="classpath.test"/>
     </javac>
 </target>
@@ -40,7 +41,7 @@
     <junit printsummary="true" haltonfailure="false">
         <formatter type="xml" usefile="true"/>
         <classpath refid="classpath.test" />
-        <batchtest fork="yes" todir="${junit.output.dir}">
+        <batchtest fork="yes" todir="${junit.report.dir}">
             <fileset dir="${src.dir}">
                 <include name="*.java"/>
             </fileset>
@@ -48,21 +49,31 @@
     </junit>
 </target>
 
-<target name="test2">
-        <mkdir dir="${junit.output.dir}"/>
+<target name="test2" depends="compile">
+        <mkdir dir="junit/test/reports"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="testing.Test" todir="${junit.output.dir}"/>
+            <test name="testing.Test" todir="${junit.report.dir}"/>
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
 
 <target name="test-reports" depends="test">
-    <junitreport tofile="TESTS-TestSuites.xml" todir="${junit.output.dir}/reports">
-        <fileset dir="${junit.output.dir}">
+    <junitreport tofile="testResults.xml" todir="${junit.report.dir}/reports">
+        <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
         </fileset>
-        <report format="frames" todir="${junit.output.dir}/reports" />
+        <report format="frames" todir="${junit.report.dir}/reports" />
     </junitreport>
 </target>
+
+<target name="test-reports2" depends="test2">
+    <junitreport tofile="testResults.xml" todir="${junit.report.dir}/reports2">
+        <fileset dir="${junit.report.dir}">
+            <include name="TEST-*.xml" />
+        </fileset>
+        <report format="frames" todir="${junit.report.dir}/reports2" />
+    </junitreport>
+</target>
+	
 </project>
