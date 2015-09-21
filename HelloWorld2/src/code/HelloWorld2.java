@@ -25,14 +25,14 @@ public class HelloWorld2 {
 
 	/**
 	 * Idioma: Ingles
-	 * @return Traducción de Hola Mundo en Ingles
+	 * @return Traduccion de Hola Mundo en Ingles
 	 */
 	public String printEng(){
 		return "Hello world";
 	}
 	
 	/**
-	 * Idioma: Español
+	 * Idioma: Espanol
 	 * @return Hola Mundo
 	 */
 	public String printSpa(){
@@ -41,7 +41,7 @@ public class HelloWorld2 {
 	
 	/**
 	 * Idioma: Frances
-	 * @return Traducción de Hola Mundo en Frances
+	 * @return Traduccion de Hola Mundo en Frances
 	 */
 	public String printFre(){
 		return "bonjour tout le monde";
@@ -49,7 +49,7 @@ public class HelloWorld2 {
 	
 	/**
 	 * Idioma: Javanes
-	 * @return Traducción de Hola Mundo en Javanes
+	 * @return Traduccion de Hola Mundo en Javanes
 	 */
 	public String printJav(){
 		return "hello donya";
@@ -57,7 +57,7 @@ public class HelloWorld2 {
 	
 	/**
 	 * Idioma: Indonesio
-	 * @return Traducción de Hola Mundo en Indonesio
+	 * @return Traduccion de Hola Mundo en Indonesio
 	 */
 	public String printInd(){
 		return "halo dunia";
@@ -65,7 +65,7 @@ public class HelloWorld2 {
 	
 	/**
 	 * Idioma: Yoruba
-	 * @return Traducción de Hola Mundo en Yoruba
+	 * @return Traduccion de Hola Mundo en Yoruba
 	 */
 	public String printYor(){
 		return "Kaabo aye";
