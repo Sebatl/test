@@ -1,6 +1,6 @@
 package code;
 /**
- * @author      Sebastián Torres
+ * @author      Sebastian Torres
  * @version     0.5
  * @since       20-9-2015
  */
