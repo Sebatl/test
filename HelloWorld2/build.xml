@@ -14,6 +14,13 @@
         <pathelement location="bin"/>
         <pathelement location="../../../Downloads/junit-4.12.jar"/>
     </path>
+              	
+	<path id="classpath.test">
+	    <pathelement location="${junit.dir}" />
+	    <pathelement location="${junit.dir}/junit-4.12.jar" />
+	    <path refid="classpath.base" />
+	</path>
+              	
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
