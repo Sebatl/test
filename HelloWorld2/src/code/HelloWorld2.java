@@ -3,7 +3,7 @@ package code;
  * App demo para IS3
  * 
  * @author      Sebastian Torres
- * @version     0.5
+ * @version     1.0
  * @since       20-9-2015
  * 
  */
