@@ -18,7 +18,7 @@ public class HelloWorld2 {
 	}
 
 	public String printEng(){
-		return "Hello World";
+		return "Hello world";
 	}
 	
 }
