@@ -44,7 +44,7 @@ public class HelloWorld2 {
 	 * @return Traduccion de Hola Mundo en Frances
 	 */
 	public String printFre(){
-		return "bonjour tout le monde";
+		return "Bonjour tout le monde";
 	}
 	
 	/**
