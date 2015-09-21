@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="jenkins-tests" basedir=".">
 
-<property name="junit.output.dir" value="output"/>
+<property name="junit.output.dir" value="${junit.dir}/test"/>
 <property name="src.dir" value="src"/>
 <property name="junit.dir" value="junit" />
 <property name="bin.dir" value="bin" />
@@ -11,7 +11,6 @@
 
 <path id="HelloWorld2.classpath">
     <pathelement location="bin"/>
-    <pathelement location="../../../Downloads/junit-4.12.jar"/>
 </path>
 
 <path id="classpath.test">
