@@ -60,7 +60,7 @@ public class HelloWorld2 {
 	 * @return Traduccion de Hola Mundo en Indonesio
 	 */
 	public String printInd(){
-		return "Halo dunia";
+		return "halo dunia";
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public class HelloWorld2 {
 	 * @return Traduccion de Hola Mundo en Yoruba
 	 */
 	public String printYor(){
-		return "Kaabo aye";
+		return "kaabo aye";
 	}
 	
 }
