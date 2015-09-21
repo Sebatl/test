@@ -40,7 +40,7 @@
     </javac>
 </target>
 
-<target name="test" depends="compile">
+<target name="testAll" depends="compile">
     <junit printsummary="true" haltonfailure="false">
         <formatter type="xml" usefile="true"/>
         <classpath refid="classpath.test" />
@@ -52,16 +52,7 @@
     </junit>
 </target>
 
-<target name="test2" depends="compile">
-        <mkdir dir="junit/test/reports"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="testing.Test" todir="${junit.report.dir}"/>
-            <classpath refid="HelloWorld2.classpath"/>
-        </junit>
-    </target>
-
-<target name="test-reports" depends="test">
+<target name="test-reports" depends="testAll">
     <junitreport tofile="testResults.xml" todir="${junit.report.dir}">
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
@@ -70,7 +61,17 @@
     </junitreport>
 </target>
 
-<target name="test-reports2" depends="test2">
+	
+<target name="testHelloWorld2" depends="compile">
+    <mkdir dir="junit/test/reports"/>
+    <junit fork="yes" printsummary="withOutAndErr">
+        <formatter type="xml"/>
+        <test name="testing.Test" todir="${junit.report.dir}"/>
+        <classpath refid="HelloWorld2.classpath"/>
+    </junit>
+</target>
+		
+<target name="test-reports2" depends="testHelloWorld2">
     <junitreport tofile="testResults2.xml" todir="${junit.report.dir}">
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
@@ -79,4 +80,5 @@
     </junitreport>
 </target>
 	
+
 </project>

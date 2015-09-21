@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 
 import code.HelloWorld2;
 
-public class Test extends TestCase {
+public class HellowWorld2Test extends TestCase {
 	
 	private HelloWorld2 hello;
 	
