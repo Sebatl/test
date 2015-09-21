@@ -68,7 +68,7 @@
 </target>
 
 <target name="test-reports2" depends="test2">
-    <junitreport tofile="testResults.xml" todir="${junit.report.dir}/reports2">
+    <junitreport tofile="testResults2.xml" todir="${junit.report.dir}/reports">
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
         </fileset>
