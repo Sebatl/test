@@ -9,6 +9,11 @@
 
 <path id="classpath.base"/>
 
+<path id="HelloWorld2.classpath">
+    <pathelement location="bin"/>
+    <pathelement location="../../../Downloads/junit-4.12.jar"/>
+</path>
+
 <path id="classpath.test">
     <pathelement location="${bin.dir}" />
     <pathelement location="${src.dir}" />
