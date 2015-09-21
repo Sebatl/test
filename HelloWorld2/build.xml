@@ -21,6 +21,7 @@
 		<pathelement location="${build.dir}" />
       </path>
               	
+              	
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
