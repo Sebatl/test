@@ -62,20 +62,20 @@
     </target>
 
 <target name="test-reports" depends="test">
-    <junitreport tofile="testResults.xml" todir="${junit.report.dir}/reports">
+    <junitreport tofile="testResults.xml" todir="${junit.report.dir}">
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
         </fileset>
-        <report format="frames" todir="${junit.report.dir}/reports" />
+        <report format="frames" todir="${junit.report.dir}" />
     </junitreport>
 </target>
 
 <target name="test-reports2" depends="test2">
-    <junitreport tofile="testResults2.xml" todir="${junit.report.dir}/reports">
+    <junitreport tofile="testResults2.xml" todir="${junit.report.dir}">
         <fileset dir="${junit.report.dir}">
             <include name="TEST-*.xml" />
         </fileset>
-        <report format="frames" todir="${junit.report.dir}/reports" />
+        <report format="frames" todir="${junit.report.dir}" />
     </junitreport>
 </target>
 	
