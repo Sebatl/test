@@ -28,7 +28,7 @@ public class HelloWorld2 {
 	 * @return Traduccion de Hola Mundo en Ingles
 	 */
 	public String printEng(){
-		return "Hello world;
+		return "Hello world";
 	}
 	
 	/**
