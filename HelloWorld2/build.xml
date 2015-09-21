@@ -31,7 +31,7 @@
 </target>
 
 <target name="compile" depends="prepare">
-    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="false" >
+    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="true" >
         <classpath refid="classpath.test"/>
     </javac>
 </target>
