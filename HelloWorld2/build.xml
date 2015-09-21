@@ -1,83 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
-<project name="jenkins-tests" basedir=".">
-
-<property name="junit.output.dir" value="${junit.dir}/test"/>
-<property name="junit.report.dir" value="junit/reports/"/>
-	
-<property name="src.dir" value="src"/>
-<property name="bin.dir" value="bin" />
-	
-<property name="junit.dir" value="junit" />
-<property name="full-compile" value="true" />
-
-<path id="classpath.base"/>
-
-<path id="HelloWorld2.classpath">
-    <pathelement location="bin"/>
-</path>
-
-<path id="classpath.test">
-    <pathelement location="${bin.dir}" />
-    <pathelement location="${src.dir}" />
-    <pathelement location="${junit.dir}" />
-    <pathelement location="${junit.dir}/junit-4.12.jar" />
-    <path refid="classpath.base" />
-</path>
-
-<target name="clean" description="Clean up build artefacts">
-    <delete dir="${basedir}/${junit.report.dir}" />
-	<delete dir="${basedir}/${bin.dir}" />
-</target>
-
-<target name="prepare" depends="clean" description="Prepare for build">
-	<mkdir dir="${basedir}/${junit.report.dir}" />
-	<mkdir dir="${basedir}/${bin.dir}" /> 
-</target>
-
-<target name="compile" depends="prepare">
-    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="false" >
-        <classpath refid="classpath.test"/>
-    </javac>
-</target>
-
-<target name="testAll" depends="compile">
-    <junit printsummary="true" haltonfailure="false">
-        <formatter type="xml" usefile="true"/>
-        <classpath refid="classpath.test" />
-        <batchtest fork="yes" todir="${junit.report.dir}">
-            <fileset dir="${src.dir}">
-                <include name="*.java"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="HelloWorld2">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../eclipse/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="HelloWorld2.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../../Downloads/junit-4.12.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
             </fileset>
-        </batchtest>
-    </junit>
-</target>
-
-<target name="test-reports" depends="testAll">
-    <junitreport tofile="testResults.xml" todir="${junit.report.dir}">
-        <fileset dir="${junit.report.dir}">
-            <include name="TEST-*.xml" />
-        </fileset>
-        <report format="frames" todir="${junit.report.dir}" />
-    </junitreport>
-</target>
-
-	
-<target name="testHelloWorld2" depends="compile">
-    <junit fork="yes" printsummary="withOutAndErr">
-        <formatter type="xml"/>
-        <test name="testing.HelloWorld2Test" todir="${junit.report.dir}"/>
-        <classpath refid="HelloWorld2.classpath"/>
-    </junit>
-</target>
-		
-<target name="test-reports2" depends="testHelloWorld2">
-    <junitreport tofile="testResults2.xml" todir="${junit.report.dir}">
-        <fileset dir="${junit.report.dir}">
-            <include name="TEST-*.xml" />
-        </fileset>
-        <report format="frames" todir="${junit.report.dir}" />
-    </junitreport>
-</target>
-	
-
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="junit">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <src path="junit"/>
+            <classpath refid="HelloWorld2.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="HelloWorld2">
+        <java classname="code.HelloWorld2" failonerror="true" fork="yes">
+            <classpath refid="HelloWorld2.classpath"/>
+        </java>
+    </target>
+    <target name="Test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="testing.Test2" todir="${junit.output.dir}"/>
+            <classpath refid="HelloWorld2.classpath"/>
+        </junit>
+    </target>
+    <target name="HelloWorld2Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="testing.HelloWorld2Test" todir="${junit.output.dir}"/>
+            <classpath refid="HelloWorld2.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
 </project>
