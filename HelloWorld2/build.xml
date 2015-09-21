@@ -3,7 +3,7 @@
 
 <property name="junit.output.dir" value="output"/>
 <property name="src.dir" value="src"/>
-<property name="lib.dir" value="libs" />
+<property name="junit.dir" value="junit" />
 <property name="bin.dir" value="bin" />
 <property name="full-compile" value="true" />
 
@@ -12,8 +12,8 @@
 <path id="classpath.test">
     <pathelement location="${bin.dir}" />
     <pathelement location="${src.dir}" />
-    <pathelement location="${lib.dir}" />
-    <pathelement location="${lib.dir}/junit.jar" />
+    <pathelement location="${junit.dir}" />
+    <pathelement location="${junit.dir}/junit-4.12.jar" />
     <path refid="classpath.base" />
 </path>
 
