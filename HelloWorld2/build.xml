@@ -115,7 +115,24 @@
 	        </junit>
 	    </target>
 	
-		
+		<target name="TestAll2" >
+
+			<mkdir dir="${junit.output.dir}"/>
+
+		    <junit printsummary="yes" haltonfailure="yes">
+		      
+		      <formatter type="xml"/>
+		      <formatter type="xml"/>
+
+		      <batchtest fork="yes" todir="${junit.output.dir}">
+		        <fileset dir="src/testing">
+		          <include name="**/*Test*.java"/>
+		        </fileset>
+		      </batchtest>
+
+		    </junit>
+
+		</target>
 		 
 		
 </project>
