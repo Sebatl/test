@@ -35,7 +35,7 @@ private Translator translator;
 	 */
 	@Test
 	public void testPrintHelloWorld() {
-		assertEquals("Hola Mundo", translator.printHelloWorld("ESP"));
+		assertEquals("Hola mundo", translator.printHelloWorld("ESP"));
 		assertEquals("Hello World", translator.printHelloWorld("ENG"));
 	}
 
