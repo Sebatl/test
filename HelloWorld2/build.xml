@@ -122,7 +122,7 @@
 		    <junit printsummary="yes" haltonfailure="no">
 		     
 		    	<classpath refid="HelloWorld2.classpath" />
-		    	<classpath location="bin" />
+		    	<classpath location="bin/testing" />
 		    	
 		      <formatter type="xml"/>
 		      <formatter type="xml"/>
