@@ -104,18 +104,7 @@
   	  </target>
 		
 	<!-- Run all tests -->
-	<target name="TestAll">
-	        <mkdir dir="${junit.output.dir}"/>
-	        <junit fork="yes" printsummary="withOutAndErr">
-	            <formatter type="xml"/>
-	        	 <batchtest todir="${junit.output.dir}">
-	        	 	<fileset dir="src/testing" includes="*Test*" />
-	        	 </batchtest>
-	            <classpath refid="HelloWorld2.classpath"/>
-	        </junit>
-	    </target>
-	
-		<target name="TestAll2" >
+		<target name="TestAll" >
 
 			<mkdir dir="${junit.output.dir}"/>
 
