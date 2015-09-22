@@ -122,14 +122,13 @@
 		    <junit printsummary="yes" haltonfailure="no">
 		     
 		    	<classpath refid="HelloWorld2.classpath" />
-		    	<classpath location="bin/testing" />
+		    	<classpath location="bin" />
 		    	
 		      <formatter type="xml"/>
-		      <formatter type="xml"/>
 
-		      <batchtest fork="yes" todir="${junit.output.dir}">
-		        <fileset dir="src">
-		          <include name="**/*Test*.java"/>
+		      <batchtest todir="${junit.output.dir}">
+		        <fileset dir="bin">
+		          <include name="**/*Test.class"/>
 		        </fileset>
 		      </batchtest>
 
