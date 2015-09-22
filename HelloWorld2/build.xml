@@ -104,17 +104,18 @@
   	  </target>
 		
 	<!-- Run all tests -->
-	 <target name="TestAll">
-        <mkdir dir="${junit.output.dir}"/>
- 		<junit>
- 	        <formatter type="xml" usefile="false" /> <!-- to screen -->
- 	        <formatter type="xml" /> <!-- to file -->
-
- 	        <batchtest todir="${junit.output.dir}">
- 	            <fileset dir="src/testing" includes="**/Test*" />
- 	        </batchtest>
- 	    </junit>
+	<target name="TestAll">
+	        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	        	 <batchtest todir="${junit.output.dir}">
+	        	 	<fileset dir="src/testing" includes="**/Test*" />
+	        	 </batchtest>
+	            <classpath refid="HelloWorld2.classpath"/>
+	        </junit>
 	    </target>
+	
+		
 		 
 		
 </project>
