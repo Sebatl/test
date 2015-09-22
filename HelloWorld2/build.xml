@@ -67,7 +67,7 @@
               	
   	<!-- Creates Javadoc -->
   	  <target name="generateJavadoc" depends="build">
-  	    <javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+  	    <javadoc packagenames="src" sourcepath="src" destdir="docs">
   	       <fileset dir="${src.dir}">
   	                <include name="**" />
   	           </fileset>
