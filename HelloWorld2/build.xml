@@ -65,6 +65,15 @@
         <antcall target="build"/>
     </target>
               	
+  	<!-- Creates Javadoc -->
+  	  <target name="generateJavadoc" depends="build">
+  	    <javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+  	       <fileset dir="${src.dir}">
+  	                <include name="**" />
+  	           </fileset>
+  	    </javadoc>
+  	  </target>
+              	
     <target name="HelloWorld2">
         <java classname="code.HelloWorld2" failonerror="true" fork="yes">
             <classpath refid="HelloWorld2.classpath"/>
@@ -80,20 +89,20 @@
         </junit>
     </target>
               	
-    <target name="HelloWorld2Test3">
+    <target name="TranslatorTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="testing.HelloWorld2Test" todir="${junit.output.dir}"/>
+            <test name="testing.TranslatorTest" todir="${junit.output.dir}"/>
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
               	
-    <target name="Test2">
+    <target name="TestAll">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="testing.Test2" todir="${junit.output.dir}"/>
+            <test name="testing.*Test" todir="${junit.output.dir}"/>
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
