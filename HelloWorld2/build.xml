@@ -31,6 +31,7 @@
               	
     <target name="clean">
         <delete dir="bin"/>
+    	<delete dir="${junit.output.dir}"/>
     </target>
               	
     <target depends="clean" name="cleanall"/>
@@ -66,7 +67,9 @@
     </target>
               	
   	<!-- Creates Javadoc -->
-  	  <target name="generateJavadoc" depends="build">
+  	  <target name="generateJavadoc">
+  	  	<delete dir="doc"/>
+  	  	<mkdir dir="doc"/>
   	    <javadoc packagenames="src" sourcepath="src" destdir="doc">
   	       <fileset dir="src">
   	                <include name="**" />
