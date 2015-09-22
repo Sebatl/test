@@ -24,6 +24,9 @@ public class Translator {
 		if(language.equals("SPA")){
 			return hello.printSpa();
 		}
+		if(language.equals("ENG")){
+			return hello.printEng();
+		}
 		
 		return "Error";
 	}

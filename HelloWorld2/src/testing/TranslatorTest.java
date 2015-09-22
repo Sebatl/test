@@ -3,19 +3,18 @@
  */
 package testing;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import code.Translator;
+import junit.framework.TestCase;
 
 /**
  * @author Seba
  * Clase de prueba para Translator
  */
-public class TranslatorTest {
+public class TranslatorTest  extends TestCase {
 
 private Translator translator;
 	
