@@ -3,10 +3,7 @@ package testing;
 import junit.framework.TestCase;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
-
 import code.HelloWorld2;
 
 public class HelloWorld2Test extends TestCase {

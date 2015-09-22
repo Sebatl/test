@@ -9,7 +9,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import code.HelloWorld2;
 import code.Translator;
 
 /**
