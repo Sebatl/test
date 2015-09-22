@@ -111,7 +111,7 @@
  	        <formatter type="xml" /> <!-- to file -->
 
  	        <batchtest>
- 	            <fileset dir="${bin}" includes="**/Test*.class" />
+ 	            <fileset dir="bin" includes="**/Test*.class" />
  	        </batchtest>
  	    </junit>
 	    </target>
