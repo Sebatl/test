@@ -9,7 +9,7 @@ package code;
  */
 public class HelloWorld2 {
 
-	
+
 	/**
 	 * @param args args to execute the app
 	 */
@@ -30,7 +30,7 @@ public class HelloWorld2 {
 	public String printEng(){
 		return "Hello world";
 	}
-	
+
 	/**
 	 * Hola Mundo en Espanol
 	 * @return Hola Mundo
@@ -38,7 +38,7 @@ public class HelloWorld2 {
 	public String printSpa(){
 		return "Hola mundo";
 	}
-	
+
 	/**
 	 * Hola Mundo en Frances
 	 * @return Traduccion de Hola Mundo en Frances
@@ -46,7 +46,7 @@ public class HelloWorld2 {
 	public String printFre(){
 		return "Bonjour tout le monde";
 	}
-	
+
 	/**
 	 * Hola Mundo en Javanes
 	 * @return Traduccion de Hola Mundo en Javanes
@@ -54,7 +54,7 @@ public class HelloWorld2 {
 	public String printJav(){
 		return "Hello donya";
 	}
-	
+
 	/**
 	 * Hola Mundo en Indonesio
 	 * @return Traduccion de Hola Mundo en Indonesio
@@ -62,7 +62,7 @@ public class HelloWorld2 {
 	public String printInd(){
 		return "Halo dunia";
 	}
-	
+
 	/**
 	 * Hola Mundo en Yoruba
 	 * @return Traduccion de Hola Mundo en Yoruba
@@ -70,6 +70,6 @@ public class HelloWorld2 {
 	public String printYor(){
 		return "Kaabo aye";
 	}
-	
-	
+
+
 }

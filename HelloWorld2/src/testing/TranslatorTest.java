@@ -16,19 +16,19 @@ import junit.framework.TestCase;
  */
 public class TranslatorTest  extends TestCase {
 
-private Translator translator;
-	
-    @Before
-    public void setUp() {
-    	translator = new Translator();
-    //	System.out.println("Setup OK");
-    }
+	private Translator translator;
 
-    @After
-    public void tearDown() {
-    	translator = null;
-    	//System.out.println("Tear OK");
-    }
+	@Before
+	public void setUp() {
+		translator = new Translator();
+		//	System.out.println("Setup OK");
+	}
+
+	@After
+	public void tearDown() {
+		translator = null;
+		//System.out.println("Tear OK");
+	}
 
 	/**
 	 * Test method for {@link code.Translator#printHelloWorld(java.lang.String)}.
