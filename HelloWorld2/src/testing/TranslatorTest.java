@@ -13,7 +13,7 @@ import code.Translator;
 
 /**
  * @author Seba
- *
+ * Clase de prueba para Translator
  */
 public class TranslatorTest {
 
