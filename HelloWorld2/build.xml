@@ -125,5 +125,11 @@
 
 		</target>
 		 		
+		<!-- make .jar -->
+		<target name="makejar">
+			 <jar destfile="hello.jar" basedir="bin/"/>
+		</target>
+		
+		
 		
 </project>
