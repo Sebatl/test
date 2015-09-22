@@ -124,32 +124,6 @@
 		    </junit>
 
 		</target>
-		 
-		<!-- CheckStyle Suport -->
-		<target name="checkstyle" >
-
-		        <checkstyle
-		            config="checkstyle.xml"
-		            failOnViolation="false" >
-
-		            <fileset
-		                dir="src"
-		                includes="**/*.java" />
-
-		            <formatter type="plain" />
-
-		            <formatter type="xml" />
-
-		            <formatter
-		                toFile="checkstyleResult.xml"
-		                type="xml" />
-		        </checkstyle>
-
-		        <style
-		            style="checkstyle-noframes.xsl"
-		            in="checkstyle-result.xml"
-		            out="checkstyleResult.html" />
-		    </target>
-		
+		 		
 		
 </project>
