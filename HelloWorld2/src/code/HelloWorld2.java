@@ -36,7 +36,7 @@ public class HelloWorld2 {
 	 * @return Hola Mundo
 	 */
 	public String printSpa(){
-		return "Hola Mundo";
+		return "Hola mundo";
 	}
 	
 	/**

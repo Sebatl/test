@@ -30,7 +30,7 @@ public class HelloWorld2Test extends TestCase {
     
     @org.junit.Test
     public void testSpaLanguage() {
-        assertEquals(hello.printSpa(), "Hola Mundo");
+        assertEquals(hello.printSpa(), "Hola mundo");
         System.out.println("@Test - SPA OK");
     }
     
