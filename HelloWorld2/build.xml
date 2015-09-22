@@ -14,6 +14,7 @@
         <pathelement location="bin"/>
         <pathelement location="junit/junit-4.12.jar"/>
     </path>
+              	
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -27,12 +28,17 @@
             </fileset>
         </copy>
     </target>
+              	
     <target name="clean">
         <delete dir="bin"/>
     </target>
+              	
     <target depends="clean" name="cleanall"/>
+              	
     <target depends="build-subprojects,build-project" name="build"/>
+              	
     <target name="build-subprojects"/>
+              	
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
@@ -41,7 +47,9 @@
             <classpath refid="HelloWorld2.classpath"/>
         </javac>
     </target>
+              	
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+              	
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
@@ -51,15 +59,18 @@
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
+              	
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+              	
     <target name="HelloWorld2">
         <java classname="code.HelloWorld2" failonerror="true" fork="yes">
             <classpath refid="HelloWorld2.classpath"/>
         </java>
     </target>
+              	
     <target name="HelloWorld2Test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -68,6 +79,7 @@
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
+              	
     <target name="HelloWorld2Test3">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -76,6 +88,7 @@
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
+              	
     <target name="Test2">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -84,6 +97,7 @@
             <classpath refid="HelloWorld2.classpath"/>
         </junit>
     </target>
+              	
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
@@ -92,4 +106,5 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+              	
 </project>
