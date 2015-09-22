@@ -102,8 +102,8 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="testing.*Test" todir="${junit.output.dir}"/>
-            <classpath refid="HelloWorld2.classpath"/>
+            <test name="testing.Test" todir="${junit.output.dir}"/>
+            <classpath refid="Translator.classpath"/>
         </junit>
     </target>
               	
