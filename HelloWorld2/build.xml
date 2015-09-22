@@ -110,8 +110,9 @@
  	        <formatter type="xml" usefile="false" /> <!-- to screen -->
  	        <formatter type="xml" /> <!-- to file -->
 
- 	        <batchtest>
+ 	        <batchtest todir="${junit.output.dir}">
  	            <fileset dir="src/testing" includes="**/Test*" />
+ 	        	<classpath refid="HelloWorld2.classpath"/>
  	        </batchtest>
  	    </junit>
 	    </target>
