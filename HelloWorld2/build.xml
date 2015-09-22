@@ -86,4 +86,15 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+              	
+	<!-- Creates Javadoc -->
+  	  <target name="generateJavadoc">
+  	  	<delete dir="doc"/>
+  	  	<mkdir dir="doc"/>
+  	    <javadoc packagenames="src" sourcepath="src" destdir="doc">
+  	       <fileset dir="src">
+  	                <include name="**" />
+  	           </fileset>
+  	    </javadoc>
+  	  </target>
 </project>
