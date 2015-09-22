@@ -103,4 +103,18 @@
   	    </javadoc>
   	  </target>
 		
+	<!-- Run all tests -->
+	 <target name="TestAll">
+        <mkdir dir="${junit.output.dir}"/>
+ 		<junit>
+ 	        <formatter type="xml" usefile="false" /> <!-- to screen -->
+ 	        <formatter type="xml" /> <!-- to file -->
+
+ 	        <batchtest>
+ 	            <fileset dir="${bin}" includes="**/Test*.class" />
+ 	        </batchtest>
+ 	    </junit>
+	    </target>
+		 
+		
 </project>
