@@ -109,7 +109,7 @@
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
 	        	 <batchtest todir="${junit.output.dir}">
-	        	 	<fileset dir="bin/testing" includes="*Test*" />
+	        	 	<fileset dir="src/testing" includes="*Test*" />
 	        	 </batchtest>
 	            <classpath refid="HelloWorld2.classpath"/>
 	        </junit>
