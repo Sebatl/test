@@ -13,11 +13,6 @@ public class HelloWorld2Test extends TestCase {
 	
 	private HelloWorld2 hello;
 	
-	/*@org.junit.Test
-	public void test() {
-		fail("Not yet implemented");
-	}*/
-
     @Before
     public void setUp() {
     	hello = new HelloWorld2();
