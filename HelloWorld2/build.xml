@@ -119,8 +119,11 @@
 
 			<mkdir dir="${junit.output.dir}"/>
 
-		    <junit printsummary="yes" haltonfailure="yes">
-		      
+		    <junit printsummary="yes" haltonfailure="no">
+		     
+		    	<classpath refid="HelloWorld2.classpath" />
+		    	<classpath location="bin" />
+		    	
 		      <formatter type="xml"/>
 		      <formatter type="xml"/>
 
